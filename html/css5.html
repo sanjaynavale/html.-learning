@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <style>
+    *{
+	  margin:0;
+	  padding:0;
+	}
+    .main{
+	   width:900px;
+	   height:900px;
+	   margin:auto;
+	}
+	
+	.logo{
+	   width:900px;
+	   height:80px;
+	   background-color:darkgrey;	   
+	}
+	
+	.logo img{
+	   float:left;
+       margin-left:50px;	   
+	}
+	
+	.logo h1{
+	   font-size:35px;
+	   float:left;
+	   margin:15px 30px;
+	   text-shadow:3px 3px 3px red;
+	}
+	
+	.link{
+	   width:900px;
+	   height:40px;
+	   background:yellow;
+	}
+	
+	.link .ul{
+	   margin:0 50px;	     
+	}
+	
+	.link li{
+	   float:left;
+	   list-style:none;
+	   width:70px;
+	   height:40px;	 
+       text-align:center;	   
+	}
+	
+	.link li a{
+	    color:brown;
+		text-decoration:none;
+		width:70px;
+		height:40px;
+		diplay:inline-block;
+		line-height:40px;
+	}
+	
+	.link li a:hover{
+		background-color:lightyellow;
+	}
+	
+	.link .ul .search-icon{
+      float:right;
+	  margin-left:40px;
+	}
+	
+	.outer{
+	   width:900px;
+	   height:500px;
+	   position:relative;
+	   background-color:lightgrey;
+	}
+	
+	.inner{
+	  width:800px;
+	  height:500px;
+	  position:absolute;
+	  background-color:lightgrey;
+	  margin:0 50px;
+	}
+	
+	.para1{
+	  width:800px; 
+	 height:110px;
+	 border-bottom:1px dotted black;
+	}
+	
+	.para1 h3{
+	  margin:10px 0;
+	  color:chocolate;
+	}
+	
+	.read-more-text{
+	  display:none;
+	}
+	
+	button{
+	  color:white;
+	  background-color:maroon;
+	  border:none;
+	  outline:none;
+	  font-size:15px;
+	  float:right;
+	}
+	
+	#para2{
+	  width:800px;
+	  height:180px;
+	}
+	#para2 h3{
+	   margin-bottom:12px;
+	}
+	
+	#para2 .image{
+	   display:inline-block;
+	   text-align:center;
+	   width:220px;
+	   height:170px;
+	   float:left;
+	   padding:0 42px 0 3px;   
+	}
+	
+	#para2 .image img{
+	    border:15px groove silver;
+		display:block;
+	}
+	
+	#para2 .image p{
+	    text-align:left;
+	}
+	
+	#pic{
+	   width:800px;
+	   height:200px;
+	}
+	
+	#pic .image{
+	   display:inline-block;
+	   text-align:center;
+	   width:220px;
+	   height:170px;
+	   float:left;
+	   padding:0 42px 0 3px;	  
+	}
+	
+	#pic .image img{
+	   border:15px groove silver;
+	   display:block;
+	}
+	
+	#pic .image p{
+	   text-align:left;
+	}
+	
+	#down{
+	   width:900px;
+	   height:230px;
+	   background-color:#ffd700;
+	}
+	
+	#down .footer{
+	   width:100px;
+	   float:left;
+	   margin:5px 50px 0 50px;
+    }
+	   
+	#down .footer ul{
+	   list-style:none;
+	   display:inline-block;	  
+	}
+	
+	#down .footer li a{
+	   text-decoration:none;
+	   color:brown
+	}
+	
+	#div{
+	   width:900px;
+	   height:50px;
+	   background-color:#ffa500;
+	}
+	
+	#div .ul{
+	   list-style:none;
+	   margin-right:50px;
+	  float:right;
+	}
+	
+	#div .ul li{
+	   font-size:15px;
+	   display:inline-block;
+	   width:80x;
+	   margin:5px;
+	   margin-bottom:50px;
+	}
+	
+	#div .ul li a{
+	   color:white;
+	   text-decoration:none;
+	   width:80px;
+	   height:50px;
+	}
+	
+	#div p{
+	   margin-left:50px;
+	   width:300px;
+	}
+ </style>
+</head>
+<body>
+  <div class="main">
+    <div class="logo"><img src="E:/Divya learning html/image/logohouse.jpg" width="80px" height="80px";>
+	    <h1>Art House</h1>
+	</div>
+	<div class="link">
+	    <div class="ul">
+	       <ul>
+		      <li><a href="1">Home</a></li>
+		      <li><a href="1">Gallery </a></li>
+		      <li><a href="1">Templates</a></li>
+		      <li><a href="1">Themes</a></li>
+		      <li><a href="1">Contact</a><li>
+		   </ul>
+		</div>
+		<div>
+		      <label class="search-icon"></label>
+		      <input type="search" value="search">
+		</div>
+	</div>
+	
+	
+	<div class="outer">
+	    <div class="inner">
+		    <div class="para1">
+			    <h3>Home Sweet Home</h3>
+				<p><span style="color:goldenrod;font-variant:small-caps;font-size:20px;">My</span> dream house would be situated in place that has a lake nearby. So that everyday will be refreshing by the breeze coming from those trees that would feel so good. 
+				    I choose to have a <span style="color:goldenrod;">lake </span>nearby because <span class="read-more-text">it is better to go natural than artificial like making swimming pools that would make my dream house cost a lot. 
+					Also, I can go fishing on the lake if I feel like doing it.My dream house would be situated in place that has a lake nearby.</span>
+				</p>
+				<button type="button" id="read-more-btn" onclick="read()">Read More</button>	
+			</div>
+			
+			<div id="para2">
+			   <h3>Mega Development Project</h3>
+			   <div class="image">
+			         <figure><img src="E:/Divya learning html/image/home 1.jpg" width="200px" height="50px" /></figure>
+			         <p>May Your Walls Know Joy; May  Every Room Hold Laughter And Every Window Open To Great Possibility.</p>
+			   </div>
+			   <div class="image">
+			         <figure><img src="E:/Divya learning html/image/home2.jpg" width="200px" height="50px"/ ></figure>
+			         <p>Having Somewhere To Go Is Home Having Someone To Love Is Family Having Both Is a Blessing.</p>
+			   </div>
+			   <div class="image"> 
+			         <figure><img src="E:/Divya learning html/image/home4.jpg" width="200px" height="50px" /></figure>
+			         <p>The Ache For Home Is In All Of Us. The Safe Place Where We Can Go As We Are And Not be Questioned.</p>
+			   </div>
+			</div>
+			
+			<div id="pic">
+		       <div class="image">
+			        <figure><img src="E:/Divya learning html/image/home4.jpg" width="200px" height="50p"/></figure>
+					<p>May Your Walls Know Joy; May  Every Room Hold Laughter And Every Window Open To Great Possibility.</p>
+			   </div>
+			   <div class="image">
+			        <figure><img src="E:/Divya learning html/image/home 1.jpg" width="200px" height="50px" /></figure>
+					<p>The Ache For Home Is In All Of Us. The Safe Place Where We Can Go As We Are And Not be Questioned.</p>
+			   </div>
+			   <div class="image">
+			        <figure><img src="E:/Divya learning html/image/home2.jpg" width="200px" height="50px"/ ></figure>
+					<p>Having Somewhere To Go Is Home Having Someone To Love Is Family Having Both Is a Blessing.</p>
+			   </div>
+		   </div>
+		</div>
+	</div>
+	    <div id="down">
+		    <div class="footer">
+			  <h3>Footage</h3>
+			  <ul>
+			     <li><a href="1">Footage images</a></li>
+				 <li><a href="1">Curated Collections</a></li>
+				 <li><a href="1">Shuttersock Select</a></li>
+				 <li><a href="1">Shuttersock Element</a></li>
+				 <li><a href="1">Categories</a></li>
+			  </ul>
+			</div>
+			<div class="footer">
+			  <h3>Images</h3>
+			  <ul>
+			     <li><a href="1">Images Home</a></li>
+				 <li><a href="1">Curated Collections</a></li>
+				 <li><a href="1">Photos</a></li>
+				 <li><a href="1">Vectors</a></li>
+				 <li><a href="1">Offset Images</a></li>
+			  </ul>
+			</div>
+			<div class="footer">
+			  <h3>Templates</h3>
+			  <ul>
+			     <li><a href="1">Templates Home</a></li>
+				 <li><a href="1">Social Media Templates</a></li>
+				 <li><a href="1">Print Templates</a></li>
+			  </ul>
+			  <h3>Music</h3>
+			  <ul>
+			     <li><a href="1">Music Home</a></li>
+				 <li><a href="1">PremiumBeat</a></li>
+			  </ul>
+			</div>
+			<div class="footer">
+			   <h3>Blog</h3>
+			   <ul>
+			     <li><a href="1">Design</a></li>
+				 <li><a href="1">Video</a></li>
+				 <li><a href="1">Contribute</a></li>
+				 <li><a href="1">News</a></li>
+				 <li><a href="1">PremiumBeat Blog</a></li> 
+			   </ul>
+			</div>
+		</div>
+		
+		<div id="div">
+		    <footer>
+			    <p><span style="color:#ffff00;">Copyright &copy 2048</span> Your Company Name</p>
+				<p>Website Templates by Free CSS Templates</p>
+				<div class="ul">
+				   <ul>
+				      <li><a href="1">home</a></li>
+					  <li><a href="1">portfolio</a></li>
+					  <li><a href="1">privacy policy</a></li>
+					  <li><a href="1">about us</a></li>
+					  <li><a href="1">contact</a></li>
+				   </ul>
+				</div>
+			</footer>
+		</div>
+	</div>
+  </div>
+</body>
+</html>
