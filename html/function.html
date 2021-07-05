@@ -1,0 +1,72 @@
+<!Doctype>
+<html>
+<head>
+</head>
+<body>
+  <script>
+    function aoc(r,s,p=22/7){
+	  let d=p*r*s;
+	  console.log("area of circle:"+d);
+	}
+	
+	aoc(3,3);
+  </script>
+  
+  <script>
+    function aor(l,b){
+	  let c=l*b;
+	  console.log("area of rectangle:"+c);
+	}
+	
+	aor(5,3);
+  </script>
+  
+  <script>
+     let aos=function(a,s){
+	    console.log("aos:"+a*s);
+	 }
+	 
+	 aos(4,4);
+  </script>
+  
+ <script>
+ /*arrow function*/
+ 
+ let cir=(a,b,c=22/7)=>{
+    return a*b*c;
+ }
+ 
+ console.log("circle:"+cir(5,5));
+ </script>
+ 
+ <script>
+   let rec=(a,b)=>a*b;
+   
+   console.log("rectangle:"+rec(8,5));
+ </script>
+ 
+ <script>
+   let squ=(a,b)=>{
+     d=a*b;
+	 console.log("square:"+d);
+   }
+   
+   squ(6,6);
+   
+ 
+ </script>
+ 
+ <script>
+   function fact(a,b){
+      c=a*b;
+	  b++;
+	  
+	  return c;
+   } 
+   
+
+   let d=fact(1,1);
+   console.log("fact:"+d);
+ </script>
+</body>
+</html>
