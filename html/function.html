@@ -4,12 +4,12 @@
 </head>
 <body>
   <script>
-    function aoc(r,s,p=22/7){
-	  let d=p*r*s;
+    function aoc(r,p=22/7){
+	  let d=p*r^2;
 	  console.log("area of circle:"+d);
 	}
 	
-	aoc(3,3);
+	aoc(3);
   </script>
   
   <script>
@@ -22,21 +22,21 @@
   </script>
   
   <script>
-     let aos=function(a,s){
-	    console.log("aos:"+a*s);
+     let aos=function(a){
+	    console.log("aos:"+a*a);
 	 }
 	 
-	 aos(4,4);
+	 aos(4);
   </script>
   
  <script>
  /*arrow function*/
  
- let cir=(a,b,c=22/7)=>{
-    return a*b*c;
+ let cir=(a,c=22/7)=>{
+    return c*a*a;
  }
  
- console.log("circle:"+cir(5,5));
+ console.log("circle:"+cir(5));
  </script>
  
  <script>
@@ -46,27 +46,28 @@
  </script>
  
  <script>
-   let squ=(a,b)=>{
-     d=a*b;
+   let squ=(a)=>{
+     d=a*a;
 	 console.log("square:"+d);
    }
    
-   squ(6,6);
+   squ(7);
    
  
  </script>
  
  <script>
-   function fact(a,b){
-      c=a*b;
-	  b++;
-	  
-	  return c;
-   } 
-   
-
-   let d=fact(1,1);
-   console.log("fact:"+d);
+   function facto(n){
+    let ans=1;
+	 if(n>1){
+	  for(let e=1;e<=n;e++)
+	    ans=ans*e;
+		}
+		return ans;
+   }
+   let factorial=facto(6);
+   console.log("factorial:"+factorial);
+ 
  </script>
 </body>
 </html>
