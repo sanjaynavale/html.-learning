@@ -92,9 +92,11 @@
  
  <script>
    const gt=[3,68,23,4,10];
-   let lar=0;
+   let lar=gt[0];
      for(let i=0;i<gt.length;i++){
-	  lar=lar<gt[i]
+	  if(lar<gt[i]){
+	      lar=gt[i];
+	  } 
 	 }
 	 console.log(lar);
 	
@@ -102,19 +104,35 @@
  
  <script>
  const ex=[4,6,8,9,2];
- const n=7;
+ const n=6;
 let h=0; 
   for(let g=0;g<=ex.length;g++){
-		h=h==ex[g];
+		if(n==ex[g]){
+		   h=1;
+		}
+	}
 		
-  if(n==v){
-		  console.log("exist");
+  if(h!=0){
+		  console.log(n+" "+"is exist");
 		}
-  else(n!=v){
-		 console.log("not-exist");
-		}
-	}	
+  else{
+		 console.log(n+" "+"is not-exist");
+		}	
   
+ </script>
+ 
+ <script>
+   const pair=[2,6,4,8,9,1,3,5,7];
+   const m=10;
+   
+    for(let j=0;j<pair.length;j++){
+	   for(let k=j+1;k<pair.length;k++){
+	      if (pair[j]+pair[k]==m){
+		    console.log(pair[j]+","+pair[k])
+		  }
+	   }
+	}
+	
  </script>
 </body>
 </html>
