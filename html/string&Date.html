@@ -1,0 +1,72 @@
+<!Doctype>
+<html>
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<script>
+ let st="javascript is a programming language";
+ let stro=new String("The Nature is Beautiful");
+ 
+ console.log("1="+st);
+ console.log(stro);
+ console.log("3="+st["1"]);//same as below
+ console.log("4="+st.length);
+ console.log("5="+st.slice(1,6));
+ console.log("5="+st.slice(-5));
+ console.log("6="+st.endsWith(7));
+ console.log("7="+st.endsWith("language"));
+ console.log("8="+st.startsWith("java"));
+ console.log("9="+st.startsWith("id"));
+ console.log("10="+st.replace("a","the"));
+ console.log("11="+st.toUpperCase());
+ console.log("12="+stro.toLowerCase());
+ console.log("13="+st.charAt(3));//same as above
+ console.log("14="+st.charCodeAt(3));
+ console.log("15="+st.localeCompare("the"));
+ console.log("15="+st.localeCompare("javascript is a programming language"));
+ console.log("15="+st.localeCompare("java"));
+ console.log("16="+st.indexOf("a"));//showing first a in the sentence 
+ console.log("16="+st.indexOf("f"));
+ console.log("17="+st.lastIndexOf("a"));//showing last a in the sentence
+ console.log("18="+st.substr(11,5));//can't give more than two no.
+
+
+let con=st.slice(11,20);
+console.log(con.toUpperCase());
+</script>
+
+<script>
+  console.log(Math.floor(12.5));
+  console.log(Math.PI);
+  console.log(Math.sqrt(25));
+  console.log(Math.pow(10,3));
+  console.log(Math.pow(12,2));
+  console.log(Math.log(21));
+  console.log(Math.max(10,22,3));
+  console.log(Math.min(34,10,27,3));
+  console.log(Math.round(10.6));
+  console.log(Math.random());
+  
+</script>
+
+<script>
+let d=new Date();
+console.log(d);
+console.log(d.getDate());
+console.log(d.getMonth());
+console.log(d.getHours());
+console.log(d.getFullYear());
+console.log(d.getSeconds());
+
+</script>
+
+<script>
+console.log(d);
+d.setDate(10);
+d.setMonth(10);
+console.log(d);
+</script>
+</body>
+</html>
