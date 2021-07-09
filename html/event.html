@@ -1,0 +1,106 @@
+<!Doctype>
+<html>
+<head>
+<script>
+
+  function sum(){
+      let a=parseInt(cal.ty.value);
+	  let b=parseInt(cal.ty1.value);
+	     cal.total.value=a+b;  
+		 cal.equa.value=cal.total.value;
+  }
+  function sub(){
+       a=parseInt(cal.ty.value);
+	   b=parseInt(cal.ty1.value);
+      cal.total.value=a-b;
+  }
+  function div(){
+       a=parseInt(cal.ty.value);
+	   b=parseInt(cal.ty1.value);
+      cal.total.value=a/b;
+  }
+  function multi(){
+       a=parseInt(cal.ty.value);
+	   b=parseInt(cal.ty1.value);
+      cal.total.value=a*b;
+  }
+  function mul(){
+       a=parseInt(cal.ty.value);
+	   b=parseInt(cal.ty1.value);
+      cal.total.value=a%b;
+  }
+ function calculate(){
+    cal.equa.value=cal.total.value;
+ }
+ 
+
+</script>
+
+<style>
+table{
+  border:1px solid black;
+  height=50%;
+}
+.t{
+  text-align:center;
+}
+</style>
+</head>
+<body>
+
+<form name="cal">
+<table>
+<tr>
+  <td><input type="text" name="ty"  size="14"></td>
+  <td><input type="text" name="ty1"  size="14"></td>
+  </tr>
+  <tr>
+  <td colspan="2" class="t">
+  <input type="reset" name="null" value="Delete" onclick="clear()">
+  <input type="button" name="r4" value="+" onclick="sum()" >
+  <input type="button" name="r" value="-" onclick="sub()">
+  <input type="button" name="r" value="*" onclick="multi()">
+  <input type="button" name="r" value="/" onclick="div()">
+  <input type="button" name="r" value="%" onclick="mul()">
+  <input type="button" name="equa" value="total" onclick="calculate()"></td>
+  </tr>
+  <tr>
+  <td colspan="2">Result:<input type="text" name="total" size="25"><br></td>
+  </tr>
+</table>  
+</form>
+<br>
+<hr>
+<br>
+<script>
+function calcu(){
+
+  let f=eval(prompt("enter your first number"));
+  let g=eval(prompt("enter your second number"));
+  let op=prompt("enter operators +,-,*,/");
+   if(confirm("Are you sure to calculate this")){
+       switch(op){
+	   case "+":
+	   alert("add"+(f+g));
+	   break;
+	   case "-":
+	   alert("sub"+(f-g));
+	   break;
+	    case "*":
+	   alert("add"+(f*g));
+	   break;
+	    case "/":
+	   alert("add"+(f/g));
+	   break;
+	   
+	   }
+	 }
+	else{
+	  alert("")
+	}
+ }
+</script>
+
+<input type="button" value="calculator" name="calcu" onclick="calcu()">
+</body>
+</html>
