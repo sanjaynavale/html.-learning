@@ -37,19 +37,57 @@
 </script>
 
 <style>
-table{
-  border:1px solid black;
+body{
+  background:linear-gradient(coral,darkorange,aquamarine,azure,antiqueWhite,honeyDew,lavenderblush,lemonchiffon);
+}
+.table{
+  border:2px solid black;
+  box-shadow:10px 10px grey;
   height=50%;
+  background-color:mintcream;
 }
 .t{
   text-align:center;
 }
+#mainid{
+ position:relative;
+ height:350px;
+ width:300px;
+ display:flex;
+ justify-content:center;
+ text-align:justify;
+}
+#mainid .form{
+ position:relative;
+ height:320px;
+ width:250px;
+ border:1px solid black;
+}
+#mainid .form div{
+ height:calc(320px/6);
+ width:inherit;
+ display:flex;
+ flex:1;
+}
+#mainid .form .dis{
+ width:250px;
+ font-size:25px;
+}
+#mainid .form input{
+  height:100%;
+  width:100%;
+  font-weight:bold;
+  font-size:20px;
+}
+
+
+
 </style>
 </head>
 <body>
 
 <form name="cal">
-<table>
+<table class="table">
 <tr>
   <td><input type="text" name="ty"  size="14"></td>
   <td><input type="text" name="ty1"  size="14"></td>
@@ -100,7 +138,71 @@ function calcu(){
 	}
  }
 </script>
+<br>
+<hr>
+<br>
 
 <input type="button" value="calculator" name="calcu" onclick="calcu()">
+
+<hr>
+<br>
+
+<div id="mainid">
+<form class="form" name="form">
+   <div class="ca">
+      <input type="text" name="text" class="dis" value="" placeholder="0" >
+   </div>
+
+   <div class="btn">
+      <input type="button" class="col" name="reset" value="CLEAR" onclick="Clear()">
+      <input type="button" class="col" name="div" value="/" onclick="no(this)">
+      <input type="button" class="col"name="percent" value="%" onclick="no(this)">
+   </div>
+
+   <div class="btn">
+      <input type="button" name="nine" value="9" onclick="no(this)">
+      <input type="button" name="eight" value="8" onclick="no(this)">
+      <input type="button" name="seven" value="7" onclick="no(this)">
+      <input type="button"  class="col" name="add" value="+" onclick="no(this)">
+   </div>
+
+   <div class="btn">
+      <input type="button" name="six" value="6" onclick="no(this)">
+      <input type="button" name="five" value="5" onclick="no(this)">
+      <input type="button" name="four" value="4" onclick="no(this)">
+      <input type="button" class="col" name="sub" value="-" onclick="no(this)">
+   </div>
+
+   <div class="btn">
+      <input type="button" name="three" value="3" onclick="no(this)">
+      <input type="button" name="two" value="2" onclick="no(this)">
+      <input type="button" name="one" value="1" onclick="no(this)">
+      <input type="button" class="col" name="multi" value="*" onclick="no(this)">
+   </div>
+
+   <div class="btn">
+      <input type="button" class="col" name="decimal" value="." onclick="no(this)">
+      <input type="button" name="zero" value="0" onclick="no(this)">
+      <input type="button" class="fas fa-backspace" name="backspace" value="del" onclick="back()">
+      <input type="button" class="equal name="equal" value="=" onclick="total()">
+   </div>
+
+</form>
+</div>
+
+<script>  
+ function no(f){
+    form.text.value += f.value;
+ }
+ function Clear(){
+    form.text.value=null;
+ }
+ function total(){
+    form.text.value=eval(form.text.value);
+ }
+ function back(){
+  form.text.value=form.text.value.slice(0,-1);
+ }
+</script>
 </body>
 </html>
