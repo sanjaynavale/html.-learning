@@ -3,8 +3,8 @@
 <head>
 <script>
  function form(){
-    let title=app.title.selected;
-	if(app.title.disabled==true){
+    let title=app.title.value;
+	if(title=="-select-"){
 	  alert("please select title..");
 	  return false;
 	}
@@ -103,11 +103,17 @@
 	   alert("Please enter current city");
 	   return false;
 	 }
-	 let note=app.note.checked;
-	 if(note==false){
-	   alert("select tc");
+	 let note=app.state.value;
+	 if(note=="-select-"){
+	   alert("select state");
 	   return false;
 	 }
+	 let country=app.country.value;
+	 if(country=="-select-"){
+	   alert("select country");
+	   return false;
+	 }
+	 
  } 
 </script>
 
