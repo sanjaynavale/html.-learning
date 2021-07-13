@@ -1,0 +1,401 @@
+<!Doctype>
+<html>
+<head>
+<script>
+ function form(){
+    let title=app.title.selected;
+	if(app.title.disabled==true){
+	  alert("please select title..");
+	  return false;
+	}
+	let uname=app.uname.value;
+	 if(uname==""){
+	  alert("Enter first name..");
+	  return false;
+	  }
+	let lname=app.lname.value;
+	if(lname==""){
+	  alert("Enter last name..");
+	  return false;
+	}
+	if(app.gen[0].checked==false && app.gen[1].checked==false && app.gen[2].checked==false){
+	  alert("select gender..");
+	  return false;
+	}
+	let dob=app.dob.value;
+	if(dob==""){
+	 alert("Enter dob..");
+	 return false;
+	}
+    let mob=app.mob.value;
+	 if(mob==""){
+	   alert("please enter mobile number..");
+	   return false;
+	 }
+	 if(isNaN(mob)){
+	  alert("Enter only mobile number.");
+	  return false;
+	 }
+	 if(mob.length!=10){
+	  alert("Please enter 10 digit number");
+	  return false;
+	 }
+	 if(mob.charAt(0)<6){
+	  alert("Please enter first number starting with 6,7,8,9");
+	  return false;
+	 }
+	 let email=app.email.value;
+	 if(email==""){
+	   alert("Enter email id..");
+	   return false;
+	 }
+	 if(email.charAt(email.length-3)!="." && email.charAt(email.length-4)!="."){
+	   alert("Please enter valid email");
+	 return false;
+	 }
+	 let pass=app.pass.value;
+	 let cpass=app.cpass.value;
+	 if(pass==""){
+	   alert("Enter password...");
+	   return false;
+	 }
+	 //(pass.length!=8)
+	 if(pass.length<6 || pass.length>8){
+	  alert("Password length must be 6 to 8 character");
+	  return false; 
+	 }
+	 let flag=0;
+	 for(let a=0;a<pass.length;a++){
+	   if(pass.charCodeAt(a)>=65 && pass.charCodeAt(a)<=90){
+	      flag=1;
+	   }
+	 }
+	 if(flag==0){
+	 alert("Please enter atleast one upper character");
+	 return false;
+	 }
+	 let flot=0;
+	 for(let b=0;b<pass.length;b++){
+	    if((pass.charCodeAt(b)>=33 && pass.charCodeAt(b)<=42) || pass.charCodeAt(b)==64){
+		flot=1;
+		}
+	 }
+	 if(flot==0){
+	   alert("Enter atleast one special character");
+	   return false;
+	 }
+	 let bla=0;
+	 for(let c=0;c<pass.length;c++){
+	   if(pass.charCodeAt(c)>=48 && pass.charCodeAt(c)<=57){
+	   bla=1;
+	   }
+	 }
+	 if(bla==0){
+	   alert("Please enter atleast one number");
+	   return false;
+	 }
+	 if(pass!=cpass){
+	   alert("password and confirm-password doesn't match ");
+	   return false;
+	 }
+	 let city=app.city.value;
+	 if(city==""){
+	   alert("Please enter current city");
+	   return false;
+	 }
+	 let note=app.note.checked;
+	 if(note==false){
+	   alert("select tc");
+	   return false;
+	 }
+ } 
+</script>
+
+<style>
+*{
+  padding=0;
+  margin=0;
+}
+body{
+   background-color:cornsilk;
+}
+h1,p{
+  text-decoration:underline;
+}
+#back{
+   background-color:ghostwhite;
+   margin:auto;
+}
+h1{
+  text-align:center;
+}
+p{
+  font-weight:bold;
+  color:blue;
+}
+span{
+  color:red;
+}
+</style>
+</head>
+<body>
+<form name="app" onsubmit="return form()">
+<table border="1" cellspacing="0" id="back">
+<caption> <h1>Application Form</h1></caption>
+
+<tr>
+<td>
+<table>
+<tr>
+   <td colspan="4"><p> Personal Information</p></td>
+  <th rowspan="8"><input type="image" src="C:/Users/roshan/Pictures/Untitled.png" height="150px" width="120px" id="img" name="img" style="border:1px solid black;"></th>
+  </tr>
+  
+  <tr>
+   <td>Title <span>*</span></td>
+   <td><select name="Title" id="title"> 
+	   <option>-select-</option>
+	   <option>Mr.</option>
+	   <option>Mrs.</option>
+	   <option>Ms.</option>
+	   <option>Miss.</option>
+	   <option>Shri</option>
+   </select></td>
+   
+   <td><label for="fname">Father's Name</label></td>
+   <td><input type="text" id="fname" name="fname"></td>
+   </tr>
+
+  <tr>
+   <td>First Name<span>*</span></td>
+   <td><input type="text" id="uname" name="uname" ></td>  
+ 
+  <td><label for="mname">Mother's Name</label></td>
+   <td><input type="text" id="mname" name="mname"></td>  
+  </tr>
+  
+  <tr>
+   <td><label for="lname">Last Name <span>*</span></label></td>
+   <td><input type="text" id="lname" name="lname"></td>
+  
+   <td><label for="gender">Gender <span>*</span></label></td>
+   <td><input type="radio" id="gender" name="gen">Male
+   <input type="radio" id="gender" name="gen">Female
+   <input type="radio" id="gender" name="gen">Other</td>
+  </tr>
+  
+  <tr>
+   <td><label for="dob">Date Of Birth<span>*</span></label></td>
+   <td><input type="date" id="dob" name="dob"></td>
+  
+   <td><label for="mob">Mobile<span>*</span></label></td>
+   <td><input type="text" id="mob" name="mob"></td>
+  </tr>
+  
+  <tr>
+   <td><label for="email">Email ID<span>*</span><label></td>
+   <td><input type="email" id="email" name="email"></td>
+  
+   <td><label for="pass">Password<span>*</span></label></td>
+   <td><input type="text" id="pass" name="pass"></td>
+  </tr>
+  
+  <tr>
+   <td><label for="ads">Present Address<span>*</span></label></td>
+   <td><input type="text" id="ads" name="ads"></td>
+   <td><label for="cpass">Confirm Password<span>*</span></label></td>
+   <td><input type="password" id="cpass" name="cpass"></td>
+  </tr>
+  
+  <tr>
+   <td><label for="ptads"> Permanent Adress</label></td>
+   <td><input type="text" id="ptads" name="ptads"></td>
+  
+   <td><label for="city">City<span>*</span></label></td>
+   <td><input type="text" id="city" name="city"></td>
+  </tr>
+  
+  <tr>
+   <td><label for="sta">State<span>*</span></label></td>
+   <td><select name="state" id="sta">
+	   <option>-select-</option>
+	   <option>Andhra pradesh</option>
+	   <option>Arunachal Pradesh</option>
+	   <option> Bihar</option>
+	   <option>Chhattisgarh</option>
+	   <option>Goa</option>
+	   <option>Gujarat</option>
+	   <option>Haryana</option>
+	   <option>Himanchal Pradesh</option>
+	   <option>Jharkhand</option>
+	   <option>Maharastra</option>
+	   <option>Madhya Pradesh</option>
+	   <option>Punjab</option>
+   </select></td>
+   
+   <td> <label for="cou">Country<span>*</span></label></td>
+   <td><select name="country" id="cou">
+	   <option>-select-</option>
+	   <option>india</option>
+   </select></td>
+  </tr> 
+  
+  <tr>
+   <td colspan="5"><p>Educational Detail:-</p></td>
+  </tr>
+  </table>
+
+  <table border="1" cellspacing="0">
+  <tr>
+   <td><h4>Sr.no.</h4></td>
+   <td><h4>Name of Exam</h4></td>
+   <td><h4>Name of Board/University</h4></td>
+   <td><h4>Year of Passing</h4></td>
+   <td><h4>Percentage/Marks</h4></td>
+  </tr>
+  
+  <tr>
+   <td><input type="text" placeholder="text"></td>
+   <td><input type="text" placeholder="text"></td>
+   <td><input type="text" placeholder="text"></td>
+   <td><input type="text" placeholder="text"></td>
+   <td><input type="text" placeholder="text"></td>
+  </tr>
+  <tr>
+   <td> <input type="text" placeholder="text"></td>
+   <td> <input type="text" placeholder="text"></td>
+   <td> <input type="text" placeholder="text"></td>
+   <td> <input type="text" placeholder="text"></td>
+   <td> <input type="text" placeholder="text"></td>
+  </tr>
+  <tr>
+   <td> <input type="text" placeholder="text"></td>
+   <td> <input type="text" placeholder="text"></td>
+   <td> <input type="text" placeholder="text"></td>
+   <td> <input type="text" placeholder="text"></td>
+   <td> <input type="text" placeholder="text"></td>
+  </tr>
+  <tr>
+   <td> <input type="text" placeholder="text"></td>
+   <td> <input type="text" placeholder="text"></td>
+   <td> <input type="text" placeholder="text"></td>
+   <td> <input type="text" placeholder="text"></td>
+   <td> <input type="text" placeholder="text"></td>
+  </tr>
+  <tr>
+   <td> <input type="text" placeholder="text"></td>
+   <td> <input type="text" placeholder="text"></td>
+   <td> <input type="text" placeholder="text"></td>
+   <td> <input type="text" placeholder="text"></td>
+   <td> <input type="text" placeholder="text"></td>
+  </tr>
+  </table>
+
+  <tr>
+   <td colspan="5"><p>Additional Qualification :-</p></td>
+  </tr>
+  </td>
+  </tr>
+  
+  <tr>
+ <td>
+  <table border="1" cellspacing="0">
+  <tr>
+   <td><h4>Sr.no.</h4></td>
+   <td><h4>Name of Exam</h2></td>
+   <td><h4>Name of Board/University</h4></td>
+   <td><h4>Year of Passing</h4></td>
+   <td><h4>Percentage/Marks</h4></td>
+  </tr>
+  
+  <tr>
+   <td> <input type="text" placeholder="text"></td>
+   <td> <input type="text" placeholder="text"></td>
+   <td> <input type="text" placeholder="text"></td>
+      <td> <input type="text" placeholder="text"></td>
+	     <td> <input type="text" placeholder="text"></td>
+		  
+  </tr>
+  <tr>
+   <td> <input type="text" placeholder="text"></td>
+   <td> <input type="text" placeholder="text"></td>
+   <td> <input type="text" placeholder="text"></td>
+   <td> <input type="text" placeholder="text"></td>
+   <td> <input type="text" placeholder="text"></td>
+		  
+  </tr>
+  </table>
+  
+  <tr>
+   <td colspan="5"><p>Previous Experience:- </p></td>
+  </tr>
+  </td>
+  </tr>
+ 
+ 
+ <tr>
+ <td>
+  <table border="1" cellspacing="0">
+  <tr>
+   <td><h4>Sr.no.</h4></td>
+   <td><h4>Posts Held</h2></td>
+   <td><h4>From-To</h4></td>
+   <td colspan="2"><h4>Organisation Name</h4></td>
+  </tr>
+  
+  <tr>
+   <td> <input type="text" placeholder="text"></td>
+   <td> <input type="text" placeholder="text"></td>
+   <td> <input type="text" placeholder="text"></td>
+   <td colspan="2"> <input type="text" placeholder="text"></td>
+  
+  <tr>
+  <tr>
+   <td> <input type="text" placeholder="text"></td>
+   <td> <input type="text" placeholder="text"></td>
+   <td> <input type="text" placeholder="text"></td>
+   <td colspan="2"> <input type="text" placeholder="text"></td>
+  
+  <tr>
+  <tr>
+   <td> <input type="text" placeholder="text"></td>
+   <td> <input type="text" placeholder="text"></td>
+   <td> <input type="text" placeholder="text"></td>
+   <td colspan="2"> <input type="text" placeholder="text"></td>
+  
+  <tr>
+  <tr>
+   <td> <input type="text" ></td>
+   <td> <input type="text" placeholder="text"></td>
+   <td> <input type="text" placeholder="text"></td>
+   <td colspan="2"> <input type="text" placeholder="text"></td>
+   </tr>
+  </table>
+ 
+  <tr>
+   <td colspan="5"><input type="checkbox" name="note">I hereby declare that to the best of my knowledge and belief, the particulars give above and the declaration made therein are true.</td>
+  </tr>
+  </td>
+  </tr>
+  
+  <tr>
+  <td>
+  <tr>
+   <td colspan="5">Date:<input type="date" name="date" id="name"></td>
+  </tr>
+  </td>
+  </tr>
+  
+  <tr>
+  <td>
+  <tr>
+   <td colspan="5"><input type="submit" value="SUBMIT">
+       <input type="reset" value="RESET"></td>
+  </tr>
+  </td>
+  </tr>
+  <table>
+  
+</form>
+</body>
+</html>
